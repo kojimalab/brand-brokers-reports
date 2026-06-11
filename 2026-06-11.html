@@ -57,6 +57,24 @@ article th{background:var(--accent-soft)}
 article blockquote{margin:1em 0; padding:.6em 1em; background:#fafbfa;
   border-left:3px solid var(--line); color:var(--muted); font-size:14px}
 article em{color:var(--muted)}
+/* 会社トグル（アコーディオン） */
+.toggle-hint{color:var(--muted); font-size:12.5px; margin:.6em 0 1em}
+details.company{border:1px solid var(--line); border-radius:12px; margin:10px 0;
+  background:#fff; overflow:hidden}
+details.company+details.company{margin-top:8px}
+details.company summary{cursor:pointer; padding:15px 18px; font-weight:700;
+  font-size:15.5px; line-height:1.5; list-style:none; display:flex; gap:10px;
+  align-items:flex-start; color:#13301f; transition:background .12s}
+details.company summary::-webkit-details-marker{display:none}
+details.company summary::before{content:"▶"; color:var(--accent); font-size:11px;
+  margin-top:.35em; flex:none; transition:transform .15s}
+details.company[open] summary::before{transform:rotate(90deg)}
+details.company summary:hover{background:var(--accent-soft)}
+details.company[open] summary{background:var(--accent-soft); border-bottom:1px solid var(--line)}
+.company-body{padding:8px 20px 16px}
+.company-body>:first-child{margin-top:.4em}
+.report-extra h2{font-size:20px; margin-top:1.8em; padding-left:12px;
+  border-left:4px solid var(--accent)}
 .comments{background:var(--card); border:1px solid var(--line); border-radius:16px;
   padding:24px 40px 32px; margin-top:20px}
 .comments h2{font-size:18px; margin:.2em 0 .2em}
@@ -80,6 +98,9 @@ article em{color:var(--muted)}
   article ul{padding-left:1.15em}
   article table{font-size:13px}
   article th,article td{padding:6px 9px}
+  details.company summary{padding:14px 14px; font-size:15px}
+  .company-body{padding:6px 15px 14px}
+  .report-extra h2{font-size:17px; padding-left:10px}
   .card{padding:15px 16px}
   .card h2{font-size:16.5px}
   .comments{padding:18px 16px 22px}
@@ -99,8 +120,8 @@ article em{color:var(--muted)}
 消費財/ブランド系（資生堂・アシックス）をバランスよく配置しています。
 全社、博展の現取引先・既出企業には含まれていません。</p>
 <hr />
-<h2>1. 株式会社島津製作所（7701・東証プライム）／分析計測・医用・精密機器</h2>
-<ul>
+<p class="toggle-hint">▶ 会社名をタップすると詳細が開きます</p>
+<details class="company"><summary>1. 株式会社島津製作所（7701・東証プライム）／分析計測・医用・精密機器</summary><div class="company-body"><ul>
 <li><strong>① 上場</strong>: 東証プライム上場（証券コード7701、上場1949年）。グローバルに展開する精密機器大手。</li>
 <li><strong>② 広告宣伝への投資度合い</strong>: BtoB中心のため広告比率は中程度（推定）。ただし<strong>2025年に創業150周年</strong>を迎え、
   ブランド露出・記念施策への投資意欲が高まっている局面。</li>
@@ -111,9 +132,8 @@ article em{color:var(--muted)}
   毎年出展する島津は、年次で繰り返す<strong>継続案件</strong>の宝庫。創業150周年に絡めた記念展示・体験型ブース・
   ヒストリー空間の提案が刺さりやすい。AI/IoT/ロボティクスを見せる先端デモの空間演出も強み発揮。</li>
 <li>出典: <a href="https://www.an.shimadzu.co.jp/topics/jasis/jasis.htm">JASIS 2025 出展</a> ／ <a href="https://minkabu.jp/stock/7701/fundamental">企業情報(7701)</a></li>
-</ul>
-<h2>2. ダイキン工業株式会社（6367・東証プライム）／空調・フッ素化学</h2>
-<ul>
+</ul></div></details>
+<details class="company"><summary>2. ダイキン工業株式会社（6367・東証プライム）／空調・フッ素化学</summary><div class="company-body"><ul>
 <li><strong>① 上場</strong>: 東証プライム上場（証券コード6367）。世界トップクラスの空調メーカー。</li>
 <li><strong>② 広告宣伝への投資度合い</strong>: グローバルブランド投資とサステナビリティ訴求に積極的
   （サステナビリティ説明会を単独開催するなど発信に注力）。</li>
@@ -123,9 +143,8 @@ article em{color:var(--muted)}
   SB国際会議主催）と直結。万博パビリオンや展示会ブースを“環境配慮型の体験空間”として設計する提案が刺さる。
   国内外の空調・モビリティ展への継続出展も案件化の入口。</li>
 <li>出典: <a href="https://www.daikin.co.jp/air/activity/expo2025">万博特設サイト</a> ／ <a href="https://www.daikin.co.jp/press/2025/20250210">AHR Expo 2025 出展</a></li>
-</ul>
-<h2>3. 株式会社村田製作所（6981・東証プライム）／電子部品・エレクトロニクス</h2>
-<ul>
+</ul></div></details>
+<details class="company"><summary>3. 株式会社村田製作所（6981・東証プライム）／電子部品・エレクトロニクス</summary><div class="company-body"><ul>
 <li><strong>① 上場</strong>: 東証プライム上場（証券コード6981）。電子部品（コンデンサ等）の世界的大手。</li>
 <li><strong>② 広告宣伝への投資度合い</strong>: BtoBだが<strong>技術ブランディング・体験型展示への投資が旺盛</strong>（推定）。
   CEATECで毎年大型ブースを構える。</li>
@@ -135,9 +154,8 @@ article em{color:var(--muted)}
   CEATECは毎年開催のため<strong>年次の継続契約</strong>が見込める。触覚・振動デバイスのインタラクティブ展示は、
   博展のデジタルコンテンツ×空間演出の得意領域とぴたり合う。</li>
 <li>出典: <a href="https://www.murata.com/en-us/events/ceatec">村田 CEATEC 出展情報</a> ／ <a href="https://eetimes.itmedia.co.jp/ee/articles/2510/08/news037.html">CEATEC 2025 大臣賞報道</a></li>
-</ul>
-<h2>4. 株式会社資生堂（4911・東証プライム）／化粧品・トイレタリー（BtoC）</h2>
-<ul>
+</ul></div></details>
+<details class="company"><summary>4. 株式会社資生堂（4911・東証プライム）／化粧品・トイレタリー（BtoC）</summary><div class="company-body"><ul>
 <li><strong>① 上場</strong>: 東証プライム上場（証券コード4911）。国内化粧品最大手のグローバルブランド。</li>
 <li><strong>② 広告宣伝への投資度合い</strong>: ◎極めて高い。<strong>マーケティングコスト（広告費・販促費を含む）が
   売上高の約25%規模</strong>という化粧品業界の構造。リアル体験型のプロモーション施策も展開。</li>
@@ -147,9 +165,8 @@ article em{color:var(--muted)}
   常時ニーズ</strong>がある最有力のBtoC案件。新商品ローンチイベント、期間限定の体験ストア、メディア向け
   プライベートショーなど、博展のブランディング×空間×イベントを丸ごと当てられる。</li>
 <li>出典: <a href="https://yakujihou-marketing.net/archives/798">化粧品業界の広告比率</a> ／ <a href="https://irbank.net/E00990/SellingGeneralAndAdministrativeExpenses-AdvertisingExpenditureSGA">資生堂 広告費の推移(IR BANK)</a></li>
-</ul>
-<h2>5. 株式会社アシックス（7936・東証プライム）／スポーツ用品（BtoCブランド）</h2>
-<ul>
+</ul></div></details>
+<details class="company"><summary>5. 株式会社アシックス（7936・東証プライム）／スポーツ用品（BtoCブランド）</summary><div class="company-body"><ul>
 <li><strong>① 上場</strong>: 東証プライム上場（証券コード7936）。神戸発のグローバルスポーツブランド。</li>
 <li><strong>② 広告宣伝への投資度合い</strong>: 会員プログラム「OneASICS」で顧客接点とブランド体験に投資。
   スポーツ大会連動の販促・体験施策が活発。</li>
@@ -159,10 +176,8 @@ article em{color:var(--muted)}
   ファンエンゲージメント空間</strong>の設計はまさに博展の領域。製品体験（シューズの計測・試走）を演出する
   インタラクティブ空間や、大会期間の街なか体験施設の企画運営を提案できる。</li>
 <li>出典: <a href="https://prtimes.jp/main/html/rd/p/000000263.000020802.html">世界陸上 体験イベント(PR TIMES)</a> ／ <a href="https://www.buffett-code.com/company/7936/">企業情報(7936)</a></li>
-</ul>
-<hr />
-<h2>📌 今回のまとめ</h2>
-<p>5社は博展の3つの取引先パターンを代表します ―― <strong>(A) 学会・展示会の常連BtoB製造業</strong>（島津・村田）、
+</ul></div></details>
+<section class="report-extra"><h2>📌 今回のまとめ</h2><p>5社は博展の3つの取引先パターンを代表します ―― <strong>(A) 学会・展示会の常連BtoB製造業</strong>（島津・村田）、
 <strong>(B) サステナビリティ/脱炭素を体験で見せたい大手</strong>（ダイキン）、<strong>(C) 広告・体験投資が旺盛なBtoCブランド</strong>
 （資生堂・アシックス）。営業アプローチとしては、製造業3社は<strong>毎年の展示会・学会出展の継続案件</strong>を入口に、
 消費財2社は<strong>ブランド体験・ポップアップ・ローンチイベント</strong>を入口にするのが有効です。
@@ -170,8 +185,8 @@ article em{color:var(--muted)}
 博展のサステナビリティ・体験設計の強みを当てやすい本命格です。</p>
 <hr />
 <p><em>※ 公開情報（各社公式・展示会公式・IR・報道）に基づく見込み先の見繕いです。広告比率など一部は推定を含み、
-各出典リンクで確認できます。実際の提案前に最新の出展予定・取引状況をご確認ください。</em></p></article>
+各出典リンクで確認できます。実際の提案前に最新の出展予定・取引状況をご確認ください。</em></p></section></article>
 <section class="comments"><h2>💬 ご意見・フィードバック</h2><p class="comments-note">対象レポート: <b>2026-06-11</b>（アカウント不要。いただいた内容は作成者だけに届き、企業選定の参考にします）</p><iframe class="feedback-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdbtOJblqHTQKVMf8kK208SBTWWKF5gmBKzstGiINvpU_5wgg/viewform?embedded=true" height="820" width="100%" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" title="フィードバックフォーム">読み込んでいます…</iframe></section>
 </main>
-<div class="footer">brand brokers — 公開情報に基づく見込み先レポート（社内利用）。生成: 2026-06-11 16:57</div>
+<div class="footer">brand brokers — 公開情報に基づく見込み先レポート（社内利用）。生成: 2026-06-11 17:05</div>
 </body></html>

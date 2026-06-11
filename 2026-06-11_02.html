@@ -50,7 +50,8 @@ article strong{color:#13301f}
 article ul{padding-left:1.3em}
 article li{margin:.25em 0}
 article hr{border:0; border-top:1px solid var(--line); margin:2em 0}
-article table{border-collapse:collapse; width:100%; margin:1em 0; font-size:14.5px}
+.tablewrap{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1em 0}
+article table{border-collapse:collapse; width:100%; font-size:14.5px}
 article th,article td{border:1px solid var(--line); padding:8px 12px; text-align:left}
 article th{background:var(--accent-soft)}
 article blockquote{margin:1em 0; padding:.6em 1em; background:#fafbfa;
@@ -63,6 +64,27 @@ article em{color:var(--muted)}
 .feedback-form{display:block; border:1px solid var(--line); border-radius:10px; background:#fff}
 .footer{max-width:860px; margin:0 auto; padding:24px 20px 48px; color:var(--muted);
   font-size:12.5px; text-align:center}
+
+/* スマホ向け（〜600px） */
+@media (max-width:600px){
+  body{font-size:15px; line-height:1.8}
+  .wrap{padding:0 14px}
+  .topbar{padding:13px 16px}
+  .topbar .wrap{flex-direction:column; gap:2px; padding:0}
+  .topbar h1{font-size:18px}
+  main{padding:20px 0 44px}
+  article{padding:2px 18px 26px; border-radius:12px}
+  article h1{font-size:20px}
+  article h2{font-size:17px; padding-left:10px}
+  article h3{font-size:15.5px}
+  article ul{padding-left:1.15em}
+  article table{font-size:13px}
+  article th,article td{padding:6px 9px}
+  .card{padding:15px 16px}
+  .card h2{font-size:16.5px}
+  .comments{padding:18px 16px 22px}
+  .feedback-form{height:980px}   /* 縦に積まれる分、高さを確保 */
+}
 </style>
 </head><body>
 <div class="topbar"><div class="wrap">
@@ -139,7 +161,7 @@ article em{color:var(--muted)}
 <hr />
 <p><em>※ 公開情報（各社公式・IR・PR TIMES・報道）に基づく見込み先の見繕いです。広告比率・展示会出展など一部は推定を含み、
 各出典リンクで確認できます。提案前に最新の出展予定・取引状況をご確認ください。</em></p></article>
-<section class="comments"><h2>💬 ご意見・フィードバック</h2><p class="comments-note">対象レポート: <b>2026-06-11_02</b>（アカウント不要。いただいた内容は作成者だけに届き、企業選定の参考にします）</p><p class="comments-note" style="color:#b4534b">（フィードバックフォームは準備中です）</p></section>
+<section class="comments"><h2>💬 ご意見・フィードバック</h2><p class="comments-note">対象レポート: <b>2026-06-11_02</b>（アカウント不要。いただいた内容は作成者だけに届き、企業選定の参考にします）</p><iframe class="feedback-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdbtOJblqHTQKVMf8kK208SBTWWKF5gmBKzstGiINvpU_5wgg/viewform?embedded=true" height="820" width="100%" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" title="フィードバックフォーム">読み込んでいます…</iframe></section>
 </main>
-<div class="footer">brand brokers — 公開情報に基づく見込み先レポート（社内利用）。生成: 2026-06-11 16:50</div>
+<div class="footer">brand brokers — 公開情報に基づく見込み先レポート（社内利用）。生成: 2026-06-11 16:57</div>
 </body></html>
